@@ -212,9 +212,42 @@
       margin: 0 auto;
     }
 
+    .hero-inner {
+      display: grid;
+      gap: clamp(2rem, 4vw, 3.5rem);
+      grid-template-columns: minmax(0, 1.02fr) minmax(320px, 0.98fr);
+      align-items: center;
+      padding: 1.8rem 0;
+    }
+
     .hero-copy {
-      max-width: 760px;
+      max-width: 720px;
       padding: 6rem 0;
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0;
+    }
+
+    .hero-visual-panel {
+      width: min(100%, 560px);
+      margin-left: auto;
+      padding: 0.75rem;
+      border: 1px solid rgba(15, 79, 75, 0.12);
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.72);
+      box-shadow: 0 24px 60px rgba(31, 37, 35, 0.14);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-visual img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 1600 / 873;
+      object-fit: cover;
+      border-radius: 18px;
     }
 
     .lab-emblem {
@@ -708,10 +741,24 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
 
+      .hero-inner,
       .section-heading,
       .snapshot-grid,
       .split {
         grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        padding-top: 2.5rem;
+      }
+
+      .hero-visual {
+        justify-content: center;
+      }
+
+      .hero-visual-panel {
+        width: min(100%, 760px);
+        margin-left: 0;
       }
     }
 
@@ -743,7 +790,20 @@
       }
 
       .hero-copy {
-        padding: 4rem 0;
+        padding: 4rem 0 2.2rem;
+      }
+
+      .hero-inner {
+        padding: 1.2rem 0 3rem;
+      }
+
+      .hero-visual-panel {
+        padding: 0.55rem;
+        border-radius: 18px;
+      }
+
+      .hero-visual img {
+        border-radius: 14px;
       }
 
       h1 {
@@ -913,6 +973,11 @@
             <a class="button secondary" href="#people">Current people</a>
           </div>
         </div>
+        <figure class="hero-visual">
+          <div class="hero-visual-panel">
+            <img src="assets/hero/biosyslab-hero-illustration.jpg" alt="Illustration of a biomedical systems laboratory with multiplex assays, network models, and computational plots." loading="eager" decoding="async" fetchpriority="high">
+          </div>
+        </figure>
       </div>
     </section>
 
